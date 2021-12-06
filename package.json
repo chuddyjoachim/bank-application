@@ -25,14 +25,15 @@
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/graphql": "^9.1.2",
+    "@nestjs/mongoose": "^9.0.1",
     "@nestjs/platform-express": "^8.0.0",
     "apollo-server-express": "^3.5.0",
-    "graphql": "^16.0.1",
+    "graphql": "^15",
     "graphql-tools": "^8.2.0",
+    "mongoose": "^6.0.14",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^7.2.0",
-    "type-graphql": "^1.1.1"
+    "rxjs": "^7.2.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^8.0.0",
@@ -61,8 +62,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog",
-      "defaultScope": "global"
+      "path": "./node_modules/cz-conventional-changelog"
     }
   },
   "jest": {
@@ -81,10 +81,5 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
