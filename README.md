@@ -20,10 +20,11 @@ Banking application :- A typical Banking application example built with nestjs a
 ## Prerequisite
 
 - Node.js installed
+- Nestjs cli installed
 - Yarn installed
-- Basic javascript and typescript knowledge
+- Typescript
 - Express.js
-- Basic undestanding of graphql and how it works
+- Graphql
 - Apollo-graphql
 - Use of databases
 - Understand mongodb usage and connection to node.js app
