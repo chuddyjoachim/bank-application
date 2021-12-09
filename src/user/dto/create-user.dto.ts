@@ -1,13 +1,33 @@
-import { Field, ObjectType } from "@nestjs/graphql";
+import { Field, ObjectType } from '@nestjs/graphql';
 
 @ObjectType()
-export class CreateUserDto {    
-    @Field(() => String)
-    readonly _id: string;
+class ErrorField {
+  @Field()
+  field: string;
+  @Field()
+  message: string;
+}
 
-    @Field(() => String)
-    readonly name: string;
+@ObjectType()
+export class CreateUserDto {
+  @Field(() => [ErrorField], { nullable: true })
+  errors?: ErrorField[];
 
-    @Field(()=> String)
-    readonly email: string;
-  }
+  @Field(() => String, { nullable: true })
+  readonly _id: string;
+
+  @Field(() => String, { nullable: true })
+  readonly name: string;
+
+  @Field(() => String, { nullable: true })
+  readonly email: string;
+
+  @Field(() => String, { nullable: true })
+  readonly phoneNumber?: string;
+
+  @Field(() => String, { nullable: true })
+  readonly accountNumber?: string;
+
+  @Field(() => String, { nullable: true })
+  readonly accessToken?: string;
+}
