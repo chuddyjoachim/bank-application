@@ -1,0 +1,59 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ErrorField {
+  field: String!
+  message: String!
+}
+
+type CreateUserDto {
+  errors: [ErrorField!]
+  _id: String
+  name: String
+  email: String
+  phoneNumber: String
+  accountNumber: String
+  accessToken: String
+}
+
+type createTransactionDto {
+  _id: String!
+  madeBy: String!
+  type: String!
+  amount: Int!
+}
+
+type Query {
+  hello: String!
+  bye: String!
+  allUser: [CreateUserDto!]!
+  transaction: String!
+  allTransactions: [createTransactionDto!]!
+}
+
+type Mutation {
+  createUser(input: UserInput!): CreateUserDto!
+  loginUser(input: LoginInput!): CreateUserDto!
+  createTransaction(input: createTransactionInput!): createTransactionDto!
+  getAllTransactionByUser(UserId: String!): [createTransactionDto!]!
+}
+
+input UserInput {
+  name: String!
+  email: String!
+  password: String!
+  phoneNumber: String!
+  accountNumber: Int
+}
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+input createTransactionInput {
+  madeBy: String!
+  type: String!
+  amount: Int!
+}
